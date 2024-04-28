@@ -1,8 +1,4 @@
-# UDP Live Image Streaming
-
-This project is inspired by https://www.cs.utexas.edu/~teammco/misc/udp_video/ , where images are grabbed from camera on one machine and transfered to another machine via UDP, resulting in negligible latency.
-
-Parameters such as stream size or quality can be adjusted in `config.h` before re-compile the program.
+# UDP-Based File Transmission Systems
 
 ## Grabbing
 
@@ -16,11 +12,8 @@ If passing raw image is preferred, consider changing `jpeg` to `bmp`.
 
 ## Demo
 
-Run the following command to see stream your camera through localhost: (`CMake` and `OpenCV` required)
+Run the following command to see stream your camera through localhost: (`CMake` and `OpenCV` required).In the executable file after compiling the.cpp and.h files on the Linux terminal, open two terminal Windows and run the following two statements respectively.
 ```
-git clone https://github.com/chenxiaoqino/udp-image-streaming.git
-cd udp-image-streaming/
-cmake . && make
 ./server 10000 &
 ./client 127.0.0.1 10000
 ```
